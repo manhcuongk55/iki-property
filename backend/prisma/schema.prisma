@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// User role enum
+enum Role {
+  BUYER
+  BROKER
+  ADMIN
+}
+
+enum LeadStatus {
+  NEW_LEAD
+  CONSULTING
+  CLOSED_DEAL
+  PAID_COMMISSION
+}
+
+model User {
+  id             String    @id @default(uuid())
+  email          String    @unique
+  password       String
+  role           Role      @default(BUYER)
+  name           String
+  phone          String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  // Broker specific fields
+  companyName    String?
+  idCardNumber   String?
+  isVerified     Boolean   @default(false)
+  referralCode   String?   @unique
+
+  // Relations
+  leadsAsBroker  Lead[]    @relation("BrokerLeads")
+  leadAsBuyer    Lead?     @relation("BuyerLead")
+}
+
+model Property {
+  id             String    @id @default(uuid())
+  title          String
+  description    String
+  price          Float
+  currency       String    @default("VND")
+  location       String
+  type           String    // e.g., Apartment, Villa, Land
+  images         String[]
+  legalStatus    String    // e.g., Pink Book, 50-year lease
+  expectedRoi    Float?    // Expected Return on Investment percentage
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  leads          Lead[]
+}
+
+model Lead {
+  id             String     @id @default(uuid())
+  status         LeadStatus @default(NEW_LEAD)
+  commissionRate Float      @default(0.0) // Percentage broker gets
+  expectedCommission Float  @default(0.0) // Actual amount
+  
+  // Buyer's Financial Info at time of lead
+  buyerSavings   Float?
+  buyerIncome    Float?
+  buyerCountry   String?
+  
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+
+  // Relations
+  brokerId       String?
+  broker         User?      @relation("BrokerLeads", fields: [brokerId], references: [id])
+  
+  buyerId        String     @unique
+  buyer          User       @relation("BuyerLead", fields: [buyerId], references: [id])
+
+  propertyId     String?
+  property       Property?  @relation(fields: [propertyId], references: [id])
+}
