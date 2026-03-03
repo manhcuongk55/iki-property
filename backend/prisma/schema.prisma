@@ -82,3 +82,23 @@ model Lead {
   propertyId     String?
   property       Property?  @relation(fields: [propertyId], references: [id])
 }
+
+// Feedback / Góp ý
+enum FeedbackType {
+  BUG
+  SUGGESTION
+  PRAISE
+}
+
+model Feedback {
+  id             String       @id @default(uuid())
+  type           FeedbackType
+  content        String
+  email          String?
+  rating         Int?
+  currentPage    String       // e.g., "/properties"
+  currentSection String?      // e.g., "Featured Properties"
+  appVersion     String       // e.g., "0.2.0"
+  userAgent      String?
+  createdAt      DateTime     @default(now())
+}

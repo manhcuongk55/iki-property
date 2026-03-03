@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { VERSION_LABEL } from "@/config/version";
 
 export default function Footer() {
     return (
@@ -89,7 +90,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-navy-400">
-                        © 2025 IKI Property. All rights reserved.
+                        © 2025 IKI Property. All rights reserved. · <span className="text-navy-500">{VERSION_LABEL}</span>
                     </p>
                     <div className="flex items-center gap-4">
                         <span className="text-xs text-navy-400">
