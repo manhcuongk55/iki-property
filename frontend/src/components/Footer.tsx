@@ -17,7 +17,7 @@ export default function Footer() {
                             </span>
                         </div>
                         <p className="text-sm leading-relaxed text-navy-300">
-                            Nền tảng đầu tư bất động sản Việt Nam dành cho người lao động nước ngoài. An toàn, minh bạch, hiệu quả.
+                            Nền tảng đầu tư bất động sản Việt Nam dành cho XKLĐ Nhật-Hàn & người trẻ. An toàn, minh bạch, tokenized.
                         </p>
                     </div>
 
@@ -28,9 +28,13 @@ export default function Footer() {
                         </h4>
                         <ul className="space-y-2">
                             {[
+                                { label: "🔥 Đất nền 1-2 Tỷ", href: "/campaign" },
+                                { label: "🤖 Định giá AI", href: "/valuation" },
+                                { label: "Bản đồ BĐS", href: "/map" },
                                 { label: "Bất động sản", href: "/properties" },
+                                { label: "Tin tức", href: "/news" },
+                                { label: "💬 Chat", href: "/chat" },
                                 { label: "Tính tài chính", href: "/calculator" },
-                                { label: "Về chúng tôi", href: "/about" },
                             ].map((link) => (
                                 <li key={link.href}>
                                     <Link
@@ -50,7 +54,7 @@ export default function Footer() {
                             Loại BĐS
                         </h4>
                         <ul className="space-y-2">
-                            {["Căn hộ", "Biệt thự", "Shophouse", "Penthouse"].map((type) => (
+                            {["Đất nền", "Căn hộ", "Biệt thự", "Shophouse", "Căn hộ áp mái"].map((type) => (
                                 <li key={type}>
                                     <span className="text-sm text-navy-300">{type}</span>
                                 </li>
@@ -76,6 +80,16 @@ export default function Footer() {
                                 </svg>
                                 +84 901 234 567
                             </li>
+                            <li>
+                                <a
+                                    href="https://zalo.me/g/campaign-xkld"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-sm text-safe hover:text-green-300 transition-colors font-medium"
+                                >
+                                    💬 Zalo: Tư vấn đất nền XKLĐ
+                                </a>
+                            </li>
                             <li className="flex items-start gap-2 text-sm text-navy-300">
                                 <svg className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -90,7 +104,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-navy-400">
-                        © 2025 IKI Property. All rights reserved. · <span className="text-navy-500">{VERSION_LABEL}</span>
+                        © 2026 IKI Property. All rights reserved. · <span className="text-navy-500">{VERSION_LABEL}</span>
                     </p>
                     <div className="flex items-center gap-4">
                         <span className="text-xs text-navy-400">

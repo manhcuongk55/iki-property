@@ -12,20 +12,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "IKI Property — Đầu tư BĐS Việt Nam cho người Việt ở nước ngoài",
+  title: "IKI Property — Đất nền 1-2 Tỷ Tokenized cho XKLĐ Nhật-Hàn & Người trẻ",
   description:
-    "Nền tảng giúp người lao động Việt Nam ở nước ngoài đầu tư bất động sản về Việt Nam an toàn, minh bạch và hiệu quả. Công cụ tài chính thông minh, dự án uy tín, hỗ trợ 24/7.",
+    "Đầu tư đất nền từ 600 triệu đến 2 tỷ VNĐ. Token hóa BĐS — sở hữu từ 10 triệu/token. Yield 8-16%/năm. Pháp lý 7 lớp xác minh AI. Dành cho XKLĐ Nhật-Hàn, CEO trẻ & người Việt ở nước ngoài.",
   keywords: [
+    "đất nền tokenized",
     "đầu tư bất động sản",
+    "XKLĐ Nhật Bản",
+    "XKLĐ Hàn Quốc",
+    "đất nền 1-2 tỷ",
+    "token hóa bất động sản",
     "người Việt ở nước ngoài",
     "kiều hối",
-    "bất động sản Việt Nam",
     "IKI Property",
   ],
   openGraph: {
-    title: "IKI Property — Đầu tư BĐS Việt Nam cho người Việt ở nước ngoài",
+    title: "IKI Property — Đất nền 1-2 Tỷ Tokenized | Yield 8-16%/năm",
     description:
-      "Nền tảng giúp người lao động Việt Nam ở nước ngoài đầu tư bất động sản về Việt Nam an toàn, minh bạch và hiệu quả.",
+      "Đầu tư đất nền từ 10 triệu/token. Pháp lý 7 lớp AI. Dành cho XKLĐ Nhật-Hàn & người trẻ Việt Nam.",
     type: "website",
   },
 };

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { properties, formatVND, formatUSD, formatJPY } from "@/data/properties";
 
-const propertyTypes = ["Tất cả", "Apartment", "Villa", "Shophouse", "Penthouse"];
+const propertyTypes = ["Tất cả", "Đất nền", "Căn hộ", "Biệt thự", "Shophouse", "Căn hộ áp mái"];
 
 export default function PropertiesPage() {
     const [filter, setFilter] = useState("Tất cả");
@@ -36,8 +36,8 @@ export default function PropertiesPage() {
                                 key={type}
                                 onClick={() => setFilter(type)}
                                 className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${filter === type
-                                        ? "bg-gold-500 text-navy-900 shadow-lg shadow-gold-500/25"
-                                        : "bg-white/10 text-navy-200 hover:bg-white/20"
+                                    ? "bg-gold-500 text-navy-900 shadow-lg shadow-gold-500/25"
+                                    : "bg-white/10 text-navy-200 hover:bg-white/20"
                                     }`}
                             >
                                 {type}

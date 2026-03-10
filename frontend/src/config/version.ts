@@ -4,6 +4,6 @@
 // MINOR: Tính năng mới
 // PATCH: Bugfix, sửa lỗi nhỏ
 
-export const APP_VERSION = "0.2.0";
-export const BUILD_DATE = "2026-03-03";
+export const APP_VERSION = "0.3.0";
+export const BUILD_DATE = "2026-03-09";
 export const VERSION_LABEL = `v${APP_VERSION}`;
