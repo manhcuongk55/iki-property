@@ -16,6 +16,7 @@ export default function Header() {
         { label: "Bất động sản", href: "/properties" },
         { label: "Tin tức", href: "/news" },
         { label: "💬 Chat", href: "/chat" },
+        { label: "⚖️ Pháp lý", href: "/legal-partner/luat-nguyen" },
     ];
 
     return (

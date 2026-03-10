@@ -35,6 +35,7 @@ export default function Footer() {
                                 { label: "Tin tức", href: "/news" },
                                 { label: "💬 Chat", href: "/chat" },
                                 { label: "Tính tài chính", href: "/calculator" },
+                                { label: "⚖️ Đối tác Pháp lý", href: "/legal-partner/luat-nguyen" },
                             ].map((link) => (
                                 <li key={link.href}>
                                     <Link

@@ -68,6 +68,19 @@ export default function CampaignPage() {
                                 className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-safe/40 px-8 py-4 text-base font-semibold text-safe transition-all hover:bg-safe/10 hover:border-safe/60"
                             />
                         </div>
+
+                        {/* Trust Badge */}
+                        <div className="mt-8 flex items-center justify-center gap-3 animate-fade-in">
+                            <div className="w-10 h-10 rounded-full bg-navy-800 border border-gold-500/30 flex items-center justify-center text-xl shadow-lg shadow-gold-500/10">
+                                ⚖️
+                            </div>
+                            <div className="text-left">
+                                <span className="block text-xs text-navy-200">Được bảo chứng Pháp lý bởi đối tác</span>
+                                <Link href="/legal-partner/luat-nguyen" className="text-sm font-bold text-gold-400 hover:text-gold-300 hover:underline transition-colors block">
+                                    Luật Nguyễn Group (Canada / VN)
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -126,8 +139,8 @@ export default function CampaignPage() {
                             },
                             {
                                 step: "02",
-                                title: "AI phân tích 7 lớp pháp lý",
-                                desc: "Basao AI xác minh: chủ sở hữu, quy hoạch, tranh chấp, giá thị trường, lịch sử giao dịch. Kết quả trong 30 giây.",
+                                title: "Luật Nguyễn phê duyệt 7 lớp pháp lý",
+                                desc: "Hợp tác cùng Luật Nguyễn Group xác minh: chủ sở hữu, quy hoạch, tranh chấp, giá thị trường. Kết quả thẩm định minh bạch 100%.",
                                 icon: (
                                     <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
